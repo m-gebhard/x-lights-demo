@@ -9,6 +9,6 @@ You can serve the app directly after installing the required dependencies.
 1. Install dependencies
 `yarn install`
 
-2. Install dependencies
+2. Start server
 `yarn serve`
 
