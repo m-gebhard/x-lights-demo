@@ -1,0 +1,61 @@
+.icon-selector {
+    @include spacing(padding, xs);
+
+    position: fixed;
+    bottom: 10vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 3;
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+    background: var(--bg-contrast);
+    border-top: 2px solid var(--primary-dark);
+    transition: max-height $transition-regular, opacity $transition-regular;
+
+    @include bp(s) {
+        bottom: 0;
+    }
+}
+
+.icon-selector__letter {
+    @include spacing(margin, s, top bottom);
+    @include spacing(margin, m, left);
+    @include text(p2);
+
+    width: 100%;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.icon-selector--open {
+    opacity: 1;
+    max-height: 35vh;
+    overflow: scroll;
+}
+
+.icon-selector__item {
+    @include text(h3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: color $transition-fast;
+
+    @include bp(m) {
+        &:hover {
+            color: var(--primary);
+        }
+    }
+}

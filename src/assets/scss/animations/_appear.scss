@@ -1,0 +1,7 @@
+.appear-enter-active, .appear-leave-active {
+    transition: all $transition-fast;
+}
+.appear-enter, .appear-leave-to {
+    opacity: 0;
+    transform: scale(1);
+}

@@ -1,0 +1,77 @@
+.custom-checkbox {
+    @include spacing(padding, s);
+
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: relative;
+
+    opacity: 1;
+    cursor: pointer;
+    user-select: none;
+    background: var(--bg-light);
+    border-radius: $border-radius-default;
+    transition: opacity $transition-fast;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .custom-checkbox__input-checkmark {
+            background: none;
+
+            svg {
+                opacity: 1;
+                color: var(--primary);
+            }
+
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+.custom-checkbox__input-checkmark {
+    @include spacing(margin, s, right);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 25px;
+    height: 25px;
+
+    border-radius: 3px;
+    transform: translateY(-50%);
+    transition: background 0.2s;
+    background: var(--bg-lighter);
+
+    svg {
+        opacity: 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: none;
+    }
+
+    @include bp(l) {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.custom-checkbox__label {
+    @include text(p2);
+
+    user-select: none;
+}

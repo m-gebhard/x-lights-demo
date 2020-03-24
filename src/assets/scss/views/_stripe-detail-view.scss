@@ -1,0 +1,111 @@
+.stripe-detail-view {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.stripe-detail-view__header {
+    @include spacing(margin, m, bottom);
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: 50px;
+}
+
+.stripe-detail-view__header-info {
+    flex: 1;
+}
+
+.stripe-detail-view__online-status {
+    @include text(p2);
+
+    color: var(--font);
+    text-transform: uppercase;
+}
+
+.stripe-detail-view__online-status--online {
+    color: var(--primary);
+}
+
+.stripe-detail-view__id {
+    @include text(p2);
+    color: var(--font);
+    opacity: 0.75;
+}
+
+.stripe-detail-view__form {
+    margin-bottom: 20px;
+}
+
+.stripe-detail-view__form-stripe-icon {
+    margin-top: 26px;
+    min-height: 38px;
+    max-height: 38px;
+    flex: 0 1 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    border-radius: $border-radius-default / 2;
+    color: var(--primary);
+    background: var(--bg-light);
+
+    .icon-selector {
+        cursor: auto;
+        color: var(--font);
+    }
+}
+
+.stripe-detail-view__close {
+    color: var(--font);
+    font-size: 30px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.stripe-detail-view__sensor {
+    @include spacing(padding, xs);
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    cursor: pointer;
+    color: var(--font);
+    background: var(--primary-dark);
+    border-radius: $border-radius-default / 2;
+    transition: background $transition-fast, opacity $transition-fast;
+
+    @include bp(m) {
+        &:hover {
+            opacity: 1 !important;
+            background: var(--primary-dark);
+        }
+    }
+}
+
+.stripe-detail-view__sensor-section {
+    flex: 1;
+    padding: 0 10px;
+
+    &:last-of-type {
+        margin-left: 0;
+        text-align: right;
+    }
+}
+
+.stripe-detail-view__sensor-list--empty {
+    @include text(p2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    user-select: none;
+    color: rgba(var(--font), 0.6);
+
+    span {
+        margin: 0 10px;
+        color: var(--primary);
+        font-weight: 900;
+    }
+}

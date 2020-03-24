@@ -1,0 +1,102 @@
+.stripes-overview {
+    display: flex;
+    flex-flow: column wrap;
+    overflow: hidden;
+    margin-top: -20px;
+    margin-bottom: -30px;
+    height: calc(100% + 60px);
+
+    @include bp(s) {
+        margin-top: -20px;
+        height: 100%;
+    }
+}
+
+.stripes-overview--mini-teasers {
+    .stripes-overview__list {
+        flex-flow: row wrap;
+        min-height: 60px;
+    }
+}
+
+.stripes-overview__room-wrapper {
+    flex: 1;
+    overflow: scroll;
+}
+
+.stripes-overview__list {
+    @include spacing(padding, xs, left right);
+
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+
+    @include bp(l) {
+        flex-flow: row wrap;
+    }
+}
+
+.stripes-overview__list-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    user-select: none;
+    background: var(--bg);
+    border-radius: $border-radius-default * 2;
+}
+
+.stripes-overview__list-item-head {
+    @include spacing(padding, m);
+
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.stripes-overview__room-title {
+    @include spacing(margin, s, bottom);
+    @include text(h3);
+
+    cursor: pointer;
+    color: var(--font);
+}
+
+.stripes-overview__mode-title {
+    color: var(--font);
+    opacity: 0.75;
+}
+
+.stripes-overview__power-button {
+    @include spacing(margin, m, left right);
+    @extend .custom-checkbox;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+
+    padding: 0 !important;
+    width: 60px !important;
+    height: 60px !important;
+
+    svg {
+        color: var(--font);
+        transition: color $transition-fast;
+    }
+
+    @include bp(m) {
+        &:hover {
+            svg {
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+.stripes-overview__power-button--on {
+    svg {
+        color: var(--primary);
+    }
+}

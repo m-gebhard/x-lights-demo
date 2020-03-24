@@ -1,0 +1,22 @@
+.text-divider {
+    @include spacing(margin, s, bottom);
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.text-divider__hr {
+    @include spacing(margin, m, right);
+    flex: 1;
+}
+
+.text-divider__label {
+    @include spacing(margin, m, left);
+    @include text(p3);
+
+    opacity: 0.5;
+    margin-left: auto;
+    color: var(--font);
+    text-transform: uppercase;
+}

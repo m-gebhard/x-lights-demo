@@ -1,0 +1,7 @@
+.list-enter-active, .list-leave-active {
+    transition: all $transition-long;
+}
+.list-enter, .list-leave-to {
+    opacity: 0;
+    transform: translateY(20px);
+}

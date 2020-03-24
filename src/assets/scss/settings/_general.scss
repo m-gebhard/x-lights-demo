@@ -1,0 +1,84 @@
+input {
+    @include text(p2);
+    @include spacing(padding, xs);
+
+    padding-left: 12px !important;
+    min-height: 38px;
+    max-height: 38px;
+    border: none;
+    color: var(--font);
+    outline: none;
+    margin-bottom: 10px;
+    background: var(--bg-light);
+    transition: $transition-fast;
+    border-bottom: 2px solid transparent;
+
+    @include bp(m) {
+        &:focus {
+            border-bottom: 2px solid var(--primary);
+        }
+    }
+}
+
+button {
+    @include spacing(padding, s);
+
+    width: 100%;
+    cursor: pointer;
+    color: var(--font);
+    border: none;
+    outline: none;
+    border-radius: $border-radius-default / 2;
+    text-transform: uppercase;
+    background: var(--bg-light);
+    transition: background $transition-fast, opacity $transition-fast;
+
+    @include bp(m) {
+        width: auto;
+
+        &:hover {
+            background: var(--bg-lighter);
+        }
+    }
+
+    &.button--light {
+        width: auto;
+        background: var(--bg-light);
+    }
+
+    &.button--large {
+        min-width: 160px;
+    }
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: var(--bg-light);
+}
+
+.button--red {
+    background: var(--red);
+}
+
+select {
+    width: 100%;
+    height: 40px;
+    color: var(--font);
+    outline: none;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: var(--bg-light);
+
+    appearance: none;
+    padding-left: 12px;
+    border-radius: $border-radius-default / 2;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+hr {
+    width: 50%;
+    opacity: 0.1;
+}

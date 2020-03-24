@@ -1,0 +1,40 @@
+.alert-box {
+    @include spacing(margin, m, bottom);
+    @include spacing(padding, s);
+
+    display: flex;
+    align-items: center;
+
+    opacity: 0;
+    max-height: 0;
+    cursor: pointer;
+    overflow: hidden;
+    background: var(--bg-contrast);
+    border-radius: 3px 3px 0 0;
+    border-bottom: 2px solid var(--red);
+    transition: all $transition-regular;
+}
+
+.alert-box--opened {
+    opacity: 1;
+    max-height: 500px;
+}
+
+.alert-box__content {
+    @include text(p3);
+
+    display: flex;
+    align-items: center;
+    white-space: pre-line;
+}
+
+.alert-box__content-close {
+    @include spacing(margin, m, right);
+    @include spacing(margin, s, left);
+    @include text(p1);
+    display: none;
+
+    @include bp(m) {
+        display: block;
+    }
+}

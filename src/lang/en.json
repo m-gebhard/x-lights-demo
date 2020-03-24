@@ -1,0 +1,217 @@
+{
+    "homeScreen": {
+        "title": "Welcome",
+        "connecting": "Connecting..",
+        "connectError": "Could not reach<br><b>{host}</b>",
+        "tryToReconnect": "Try again",
+        "noSocketUrl": "Please enter the URL of your running websocket",
+        "updateUrl": "Update websocket URL"
+    },
+    "navigation": {
+        "stripes": "Strips",
+        "ledControl": "Control",
+        "appSettings": "Settings"
+    },
+    "stripesOverView": {
+        "online": "Strips Online: ",
+        "total": "Total LEDs: ",
+        "removeStripeModal": {
+            "title": "Delete Strip: {stripe}",
+            "message": "Do you really want to delete <br>{stripe}?<br>All User-settings will be gone.",
+            "confirmation": {
+                "title": "Strip Deleted",
+                "message": "Strip {stripe} has been deleted!<br>The next time it connects it will be shown as a new Strip."
+            }
+        },
+        "noEntries": "Click <span>+</span> to add a Group",
+        "noRoomEntries": "No Strips have been added yet",
+        "newStripeSection": {
+            "title": "New Strips ({count})"
+        }
+    },
+    "stripeTeaser": {
+        "rootNode": "Start"
+    },
+    "ledDetailView": {
+        "online": "Online",
+        "offline": "Offline",
+        "room": "Group",
+        "name": "Name",
+        "notes": "Notes",
+        "count": "LED Count",
+        "reversed": "Reversed",
+        "disabled": "Disabled",
+        "brightnessAdjustment": "Adjust Brightness",
+        "save": "Save",
+        "identify": "Identify",
+        "general": "General",
+        "config": "LEDs"
+    },
+    "ledControlView": {
+        "mode": "LED Mode",
+        "sensor": "Sensor",
+        "speed": "Animation Speed",
+        "brightness": "Brightness",
+        "moving": "Moving",
+        "fading": "Fading",
+        "minSensorValue": "Trigger Value",
+        "color": "Color",
+        "addPoint": "Add",
+        "removePoint": "Del",
+        "save": "Update LEDs",
+        "gradientEditor": "Color Zones",
+        "title": "Control",
+        "all": "All"
+    },
+    "nodeEditor": {
+        "title": "Node Editor",
+        "stripes": "Strips",
+        "input": "Inputs",
+        "sensors": "Sensors",
+        "time": "Time",
+        "value": "value",
+        "leds": " Leds",
+        "minutesShort": "m",
+        "stripeOnlineStatus": "Strip Online Status",
+        "actions": "Actions",
+        "displayTooSmall": "Sorry, to use the node editor you need a higher display resolution",
+        "availableActions": {
+            "setMode": "Set Mode",
+            "setColors": "Set Colors",
+            "setBrightness": "Set Brightness",
+            "setStripeToSync": "Set Sync Strip"
+        }
+    },
+    "optionsView": {
+        "title": "Options",
+        "language": "Language",
+        "theme": "Theme",
+        "enableOfflineStripeBgs": "LED Preview for offline Strips",
+        "showStripesAsSquares": "Use Boxes as Strip teasers",
+        "logger": "Server Log",
+        "appearance": "Appearance",
+        "debug": "Debug"
+    },
+    "modals": {
+        "confirmation": {
+            "accept": "OK",
+            "decline": "Cancel"
+        },
+        "sensor": {
+            "title": "Sensor Configuration",
+            "noEntries": "Unfortunately the demo doesn't support sensors",
+            "add": "Add sensor",
+            "update": "Update Sensor",
+            "id": "ID",
+            "name": "Sensor Name"
+        },
+        "room": {
+            "title": "Group Configuration",
+            "name": "Group Name",
+            "add": "Add Group",
+            "update": "Update Group",
+            "delete": "Delete Group",
+            "deleteConfirmation": {
+                "title": "Delete Group: {name}",
+                "message": "Do you really want to delete <br>{name}?<br>All Strips of this Group will be assigned to the first room.",
+                "confirmation": {
+                    "title": "Delete Group",
+                    "message": "Group {room} has been deleted!"
+                }
+            }
+        },
+        "presets": {
+            "title": "Presets",
+            "noItems": "No presets have been added yet..",
+            "enterName": "Enter a Preset name",
+            "save": "Save",
+            "deleteConfirmation": {
+                "title": "Delete Preset: {name}",
+                "message": "Do you really want to delete <br>{name}?"
+            }
+        }
+    },
+    "notifications": {
+        "connection": {
+            "success": {
+                "title": "Connection",
+                "message": "Connected successfully!"
+            },
+            "lost": {
+                "title": "Connection",
+                "message": "Connection has been lost, reconnecting.."
+            }
+        },
+        "updateLeds": {
+            "success": {
+                "title": "Update LEDs",
+                "message": "LEDs updated successfully!"
+            }
+        },
+        "setRoomOff": {
+            "success": {
+                "title": "Turn Off LEDs",
+                "message": "All LEDs in {room} have been turned off!"
+            }
+        },
+        "setAllRoomsOff": {
+            "success": {
+                "title": "Turn Off LEDs",
+                "message": "All LEDs in all rooms have been turned off!"
+            }
+        },
+        "updateNewStripe": {
+            "success": {
+                "title": "Update Strip",
+                "message": "{name} updated successfully!\nRestart your strip and see the magic!"
+            }
+        },
+        "updateStripe": {
+            "success": {
+                "title": "Update Strip",
+                "message": "{name} updated successfully!"
+            }
+        },
+        "updateStripes": {
+            "success": {
+                "title": "Update Strips",
+                "message": "All strips have been updated successfully!"
+            }
+        },
+        "updateSensor": {
+            "success": {
+                "title": "Update Sensor",
+                "message": "{name} updated successfully!"
+            }
+        },
+        "updateRoom": {
+            "success": {
+                "title": "Update Room",
+                "message": "{name} updated successfully!"
+            }
+        },
+        "updateOptions": {
+            "success": {
+                "title": "Update Settings",
+                "message": "Settings have been updated successfully!"
+            }
+        },
+        "updatePresets": {
+            "success": {
+                "title": "Update Presets",
+                "message": "Presets have been updated successfully!"
+            }
+        }
+    },
+    "validator": {
+        "required": "The field is required",
+        "numeric": "The value must be a number",
+        "min_value": "The value cannot be greater than 1",
+        "max_value": "The value cannot be larger than 300",
+        "regex": "The value is not valid"
+    },
+    "alerts": {
+        "stripeOutdated": "This Strip runs with outdated Firmware!\nSome features may be broken or disabled, so consider updating your Strip controller to the latest Firmware version.",
+        "demo": "Warning: This demo doesn't use real data, it is also not possible to save settings for later use in the full version.<br>Website: mgebhard.tk"
+    }
+}

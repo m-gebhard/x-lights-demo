@@ -1,0 +1,127 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+
+    z-index: 1339;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+    background: var(--bg-contrast);
+
+    @include bp(m) {
+        width: 70vw;
+        min-height: auto;
+    }
+
+    @include bp(l) {
+        width: 64vw;
+    }
+
+    @include bp(l) {
+        width: 45vw;
+    }
+}
+
+.modal--auto-height {
+    height: auto;
+    min-height: auto;
+}
+
+.modal__head {
+    @include text(p2);
+    @include spacing(padding, xs);
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--font);
+    border-radius: 3px;
+    user-select: none;
+    text-align: center;
+    padding-left: 14px !important;
+    background: var(--bg);
+
+    span {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.modal__content {
+    @include text(p1);
+    @include spacing(padding, s);
+
+    color: var(--font);
+    overflow-y: scroll;
+}
+
+.modal__content--centered {
+    @include spacing(margin, s, top bottom);
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal__footer {
+    display: flex;
+    flex-flow: row nowrap;
+
+    background: var(--bg), 3%;
+}
+
+.modal__footer-button {
+    @include text(p2);
+
+    padding: 10px;
+    flex: 1;
+    user-select: none;
+
+    @include bp(m) {
+        padding: 12px;
+    }
+}
+
+.modal__footer-button--decline {
+    background: var(--red);
+}
+
+.modal__head-close-button {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    min-width: 50px;
+    padding: 10px;
+    margin-left: auto;
+
+    cursor: pointer;
+    text-align: center;
+
+    svg {
+        color: rgba(var(--font), 0.75);
+        font-size: 24px;
+        transition: color $transition-fast;
+    }
+
+    @include bp(m) {
+        &:hover svg {
+            color: var(--font);
+        }
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    opacity: 0.7;
+    z-index: 1338;
+    transition: opacity $transition-fast;
+}

@@ -1,0 +1,23 @@
+.notification {
+    @include spacing(padding, s, left right);
+    @include spacing(padding, m, top bottom);
+    @include text(p3);
+
+    width: 100%;
+    color: var(--font);
+    background: var(--bg-contrast) !important;
+    border-bottom: 1px solid var(--font);
+
+    @include bp(m) {
+        width: auto;
+        cursor: pointer;
+    }
+}
+
+.notification.error {
+    border-bottom: 2px solid var(--red);
+}
+
+.notification.success {
+    border-bottom: 2px solid var(--primary-dark);
+}

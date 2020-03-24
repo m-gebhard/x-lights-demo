@@ -1,0 +1,7 @@
+.pop-up-enter-active, .pop-up-leave-active {
+    transition: all $transition-regular;
+}
+.pop-up-enter, .pop-up-leave-to {
+    opacity: 1;
+    transform: translate(-50%, 20px);
+}

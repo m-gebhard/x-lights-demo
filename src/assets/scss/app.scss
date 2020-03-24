@@ -1,0 +1,61 @@
+// 3rd
+@import '../../../node_modules/css-vars/css-vars';
+
+$css-vars-use-native: true;
+// Mixins
+@import './mixins/bp';
+@import './mixins/text';
+@import './mixins/spacing';
+// Settings
+@import './settings/variables';
+@import './settings/grid';
+@import './settings/reset';
+@import './settings/general';
+// Layout
+@import 'components/layout/modal';
+@import 'components/layout/navigation';
+@import 'components/layout/content-window';
+// Views
+@import './views/led-control';
+@import './views/app-settings';
+@import './views/stripes-overview';
+@import './views/stripe-detail-view';
+// Components
+@import './components/alert-box';
+@import './components/collapsible';
+@import './components/text-divider';
+@import './components/notification';
+@import './components/custom-input';
+@import './components/icon-selector';
+@import './components/stripe-teaser';
+@import './components/gradient-editor';
+@import './components/custom-checkbox';
+@import './components/custom-range-slider';
+@import './components/stripes-overview-header';
+// Modals
+@import './components/modals/presets-modal';
+// Animations
+@import './animations/list';
+@import './animations/slide';
+@import './animations/appear';
+@import './animations/pop-up';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(var(--bg-contrast), var(--bg));
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: hidden;
+    color: var(--font);
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+}
