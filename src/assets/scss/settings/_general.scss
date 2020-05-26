@@ -1,3 +1,27 @@
+* {
+    box-sizing: border-box;
+    // hide ff scrollbars
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(var(--bg-contrast), var(--bg));
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: hidden;
+    color: var(--font);
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+}
+
+
 input {
     @include text(p2);
     @include spacing(padding, xs);
